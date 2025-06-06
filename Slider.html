@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+</head>
+<body>
+    
+    
+     <a href  ="">Inicio</a>  
+     <a href  ="sobremi.html"> Sobre Mi</a>
+      <a  href = "clientes.html"> Clientes</a>
+      <a  href = "contactos.html"> Contactos</a>
+      
+        
+
+
+      <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fcf6f6;
+    }
+
+    .slider {
+      position: relative;
+      max-width: 800px;
+      margin: 70px auto;
+      overflow: hidden;
+      border-radius: 150px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    .slides {
+      display: flex;
+      width: 300%;
+      transition: transform 4s ease;
+    }
+
+    .slide {
+      min-width: 100%;
+      position: relative;
+    }
+    .slide img {
+      width: 300%;
+      height: 300;
+      border-radius: 150px;
+        display: block;}
+    
+    .slide img {
+      width: 300;
+      height: 300px;
+      display: r;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align: center; margin-top: 30px;">Mis Servicios</h1>
+
+  <div class="slider">
+    <div class="slides">
+      <!-- Slide 1 -->
+      <div class="slide">
+        <img src="redes.jpg" alt="Servicio 1">
+        <div class="caption">Redes</div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide">
+        <img src="deseños.jpg" alt="Servicio 2">
+        <div class="caption">Desarrollo web moderno</div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide">
+        <img src="progra.jpg" alt="Servicio 3">
+        <div class="caption">Programacion</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }, 4000);
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+</body>
+</html>
